@@ -1,0 +1,11 @@
+#errorMsg, #errorMsgIn{
+    display: none;
+}
+
+.card-title, .card-subtitle{
+    font-family: 'Segoe UI'sans-serif;
+}
+span{
+    font-family: cursive;
+    font-size: 18px;
+}
