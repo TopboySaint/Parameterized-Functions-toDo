@@ -15,6 +15,7 @@ function submitItems() {
 function showItems() {
   showMe.innerHTML = "";
   items.map((products, i) => {
+    newItem.value = products;
     showMe.innerHTML += `
   <div class="card bg-primary" style="width:18rem;">
     <div class="card-body">
