@@ -18,10 +18,15 @@
         <p class="alert alert-danger text-center p-2 mt-3 animate__animated animate__shakeX" id="errorMsg">
             Please fill in the empty spaces</p>
             <div class="form-floating">
-                <input type="text" class="form-control" id="floatingPassword" placeholder="What are you buying today?">
-                <label for="floatingPassword">What are you buying today?</label>
+                <input type="text" class="form-control" id="floatingPassword" placeholder="What are you doing?">
+                <label for="floatingPassword">What are you doing?</label>
               </div>
-        <button onclick="submitItems()" class="btn btn-sm my-3 w-100 btn-primary">Submit your Item</button>
+
+              <div class="form-floating">
+                <input type="text" class="form-control mt-3" id="floatingPasswordTwo" placeholder="Description">
+                <label for="floatingPassword">Description</label>
+              </div>
+        <button onclick="submitItems()" class="btn btn-sm my-3 w-100 btn-primary">Submit</button>
     </div>
 
     
@@ -45,6 +50,7 @@
         <div class="modal-body">
         <p class="alert alert-danger text-center p-2 mt-3" id="errorMsgIn">Please fill in the empty spaces</p>
           <input type="text" class="form-control" placeholder="Add your new Item" id="newItem">
+          <input type="text" class="form-control mt-2" placeholder="Add your new Item" id="newItem2">
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
