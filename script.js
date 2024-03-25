@@ -22,8 +22,10 @@ function showItems() {
         i + 1
       }</h5>
       <h6 class="card-subtitle text-center border-bottom pb-2 fs-4 text-white"><span>Product:</span> ${products}</h6>
-      <button class="btn btn-sm my-3 mx-auto text-white btn-success w-50  me-5" onclick= "helpEdit(${i})" data-bs-toggle="modal" data-bs-target="#exampleModal">Edit</button>
-      <button class="btn btn-sm my-3 mx-auto btn-danger " onclick="delETE(${i})">Delete</button>
+      <button class="btn btn-sm my-3 mx-auto text-white btn-warning w-25 h-25 me-5 ms-4" onclick= "helpEdit(${i})" data-bs-toggle="modal" data-bs-target="#exampleModal"><img src="Images/icons8-edit-24.png" alt="">
+      </button>
+      <button class="btn btn-sm my-3 mx-auto btn-danger w-25 h-25" onclick="delETE(${i})"><img src="Images/icons8-delete-30.png" alt="">
+      </button>
     </div>
   </div>
         `;
