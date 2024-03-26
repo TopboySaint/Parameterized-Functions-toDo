@@ -4,7 +4,7 @@ var inputIndex;
 
 
 function submitItems() {
-  if (floatingPassword.value === "") {
+  if (floatingPassword.value === "" || floatingPasswordTwo.value === "") {
     document.getElementById("errorMsg").style.display = "block";
   } else {
     var toDoList = {
