@@ -1,5 +1,8 @@
 var items = [];
 var inputIndex;
+if(localStorage.items){
+  items= JSON.parse(localStorage.getItem('itemsOn'))
+}
 
 function submitItems() {
   var toDoList = {
@@ -13,7 +16,6 @@ function submitItems() {
     items.push(toDoList);
     localStorage.setItem("itemsOn", JSON.stringify(items));
     // console.log(items);
-    showItems();
     document.getElementById("floatingPassword").value = "";
     document.getElementById("floatingPasswordTwo").value = "";
     window.location.href = "show.html";
