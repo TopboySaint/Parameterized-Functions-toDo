@@ -23,21 +23,20 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <p class="alert alert-danger text-center p-2 mt-3" id="errorMsgIn">Please fill in the empty spaces</p>
+        <p class="alert alert-danger text-center p-2 mt-3" id="errorMsgIn">Please fill in the empty spaces</p>
           <input type="text" class="form-control" placeholder="Add your new To-Do" id="newItemOne1">
           <input type="text" class="form-control mt-2" placeholder="Description" id="newItemTwo2">
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary" onclick="editThis()" data-bs-dismiss="modal">Save
-            changes</button>
+          <button type="button" class="btn btn-primary" onclick="editThis()" data-bs-dismiss="modal">Save changes</button>
         </div>
       </div>
     </div>
   </div>
 
   <script>
-    var items = []
+    var items = [];
     var newToDoPLsWork;
     var getTheseItems = JSON.parse(localStorage.getItem('itemsOn'))
     newToDoPLsWork = getTheseItems
@@ -59,9 +58,7 @@
         `;
       });
     }
-
     showItems();
-
     function delETE(indexNum) {
       var askQuest = confirm("Are you sure?");
       if (askQuest === true) {
@@ -83,7 +80,7 @@
           descOf: document.getElementById("newItemTwo2").value,
         };
         newToDoPLsWork.splice(inputIndex, 1, toDoList1);
-        showItems();
+        // showItems();
       }
     }
   </script>

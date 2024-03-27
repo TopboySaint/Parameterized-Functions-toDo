@@ -1,7 +1,7 @@
 var items = [];
 var inputIndex;
-if(localStorage.items){
-  items= JSON.parse(localStorage.getItem('itemsOn'))
+if(localStorage.itemsOn){
+  items = JSON.parse(localStorage.getItem('itemsOn'))
 }
 
 function submitItems() {
