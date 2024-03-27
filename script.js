@@ -2,16 +2,18 @@ var items = [];
 var inputIndex;
 
 
-
 function submitItems() {
+  window.location.href = "show.html";
+  var toDoList = {
+    whatToDo: document.getElementById("floatingPassword").value,
+    descOf: document.getElementById("floatingPasswordTwo").value,
+  };
   if (floatingPassword.value === "" || floatingPasswordTwo.value === "") {
     document.getElementById("errorMsg").style.display = "block";
   } else {
-    var toDoList = {
-        whatToDo: document.getElementById('floatingPassword').value,
-        descOf: document.getElementById('floatingPasswordTwo').value
-    }
+    console.log(toDoList);
     items.push(toDoList);
+    localStorage.setItem('items', JSON.stringify(items))
     // console.log(items);
     showItems();
     document.getElementById("floatingPassword").value = "";
@@ -21,6 +23,13 @@ function submitItems() {
 
 function showItems() {
   // newItem.value = products;
+  if(getTheseItems){
+    getTheseItems.forEach(function(items) {
+        // console.log(items);
+        showMe.innerHTML = `
+        ${items}`
+    });
+}
   showMe.innerHTML = "";
   items.map((toDoList, i) => {
     showMe.innerHTML += `
@@ -55,9 +64,9 @@ function editThis() {
     document.getElementById("errorMsgIn").style.display = "block";
   } else {
     var toDoList = {
-      whatToDo: document.getElementById('newItem').value,
-      descOf: document.getElementById('newItem2').value
-  }
+      whatToDo: document.getElementById("newItem").value,
+      descOf: document.getElementById("newItem2").value,
+    };
     items.splice(inputIndex, 1, toDoList);
     showItems();
   }

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo Pro Max</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap.css">
+</head>
+<body>
+    <div class="col-lg-6 col-md-8 col-11 mx-auto mt-lg-2 mt-3 shadow-sm p-lg-4 p-2 row gap-3" id="showMe">
+        <p class="alert alert-danger text-center p-2 fw-bold" id="secondAlert">No Schedule added yet</p>
+    </div>
+
+
+    <script>
+        var getTheseItems = JSON.parse(localStorage.getItem(items))
+        // function submitItems(){
+        //     submitItems()
+        // }
+
+
+        // if(getTheseItems){
+        //     getTheseItems.forEach(function(items) {
+        //         // console.log(items);
+        //         showMe.innerHTML = `
+        //         ${items}`
+        //     });
+        // }
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
