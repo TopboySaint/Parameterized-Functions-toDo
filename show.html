@@ -23,13 +23,14 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-        <p class="alert alert-danger text-center p-2 mt-3" id="errorMsgIn">Please fill in the empty spaces</p>
-          <input type="text" class="form-control" placeholder="Add your new To-Do" id="newItem">
-          <input type="text" class="form-control mt-2" placeholder="Description" id="newItem2">
+          <p class="alert alert-danger text-center p-2 mt-3" id="errorMsgIn">Please fill in the empty spaces</p>
+          <input type="text" class="form-control" placeholder="Add your new To-Do" id="newItemOne1">
+          <input type="text" class="form-control mt-2" placeholder="Description" id="newItemTwo2">
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary" onclick="editThis()" data-bs-dismiss="modal">Save changes</button>
+          <button type="button" class="btn btn-primary" onclick="editThis()" data-bs-dismiss="modal">Save
+            changes</button>
         </div>
       </div>
     </div>
@@ -58,7 +59,9 @@
         `;
       });
     }
+
     showItems();
+
     function delETE(indexNum) {
       var askQuest = confirm("Are you sure?");
       if (askQuest === true) {
@@ -71,15 +74,15 @@
       inputIndex = i;
     }
 
-    function editThis() {
+    function editThis(i) {
       if (newItem.value === "") {
         document.getElementById("errorMsgIn").style.display = "block";
       } else {
-        var toDoList = {
-          whatToDo: document.getElementById("newItem").value,
-          descOf: document.getElementById("newItem2").value,
+        var toDoList1 = {
+          whatToDo: document.getElementById("newItemOne1").value,
+          descOf: document.getElementById("newItemTwo2").value,
         };
-        newToDoPLsWork.splice(inputIndex, 1, toDoList);
+        newToDoPLsWork.splice(inputIndex, 1, toDoList1);
         showItems();
       }
     }
