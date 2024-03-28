@@ -24,8 +24,8 @@
         </div>
         <div class="modal-body">
         <p class="alert alert-danger text-center p-2 mt-3" id="errorMsgIn">Please fill in the empty spaces</p>
-          <input type="text" class="form-control" placeholder="Add your new To-Do" id="newItemOne1">
-          <input type="text" class="form-control mt-2" placeholder="Description" id="newItemTwo2">
+          <input type="text" class="form-control" placeholder="Add your new To-Do" id="newItemOneInput">
+          <input type="text" class="form-control mt-2" placeholder="Description" id="newItemTwoInput">
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -37,6 +37,7 @@
 
   <script>
     var items = [];
+    var inputIndex = 0;
     var newToDoPLsWork;
     var getTheseItems = JSON.parse(localStorage.getItem('itemsOn'))
     newToDoPLsWork = getTheseItems
@@ -72,18 +73,19 @@
     }
 
     function editThis(i) {
-      if (newItem.value === "") {
+      if (newItemOneInput.value === "") {
         document.getElementById("errorMsgIn").style.display = "block";
       } else {
-        var toDoList1 = {
-          whatToDo: document.getElementById("newItemOne1").value,
-          descOf: document.getElementById("newItemTwo2").value,
+        var toDoList = {
+          whatToDo: document.getElementById("newItemOneInput").value,
+          descOf: document.getElementById("newItemTwoInput").value,
         };
-        newToDoPLsWork.splice(inputIndex, 1, toDoList1);
-        // showItems();
+        newToDoPLsWork.splice(inputIndex, 1, toDoList);
+        showItems();
       }
     }
   </script>
+  <script src="bootstrap.js"></script>
 </body>
 
 </html>
