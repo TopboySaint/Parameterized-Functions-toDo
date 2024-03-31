@@ -1,11 +1,11 @@
-var items = [];
-var inputIndex;
+let items = [];
+let inputIndex;
 if(localStorage.itemsOn){
   items = JSON.parse(localStorage.getItem('itemsOn'))
 }
 
 function submitItems() {
-  var toDoList = {
+  let toDoList = {
     whatToDo: document.getElementById("floatingPassword").value,
     descOf: document.getElementById("floatingPasswordTwo").value,
   };
@@ -41,7 +41,7 @@ function submitItems() {
 // }
 
 // function delETE(indexNum) {
-//   var askQuest = confirm("Are you sure?");
+//   let askQuest = confirm("Are you sure?");
 //   if (askQuest === true) {
 //     items.splice(indexNum, 1);
 //     showItems();
@@ -56,7 +56,7 @@ function submitItems() {
 //   if (newItem.value === "") {
 //     document.getElementById("errorMsgIn").style.display = "block";
 //   } else {
-//     var toDoList = {
+//     let toDoList = {
 //       whatToDo: document.getElementById("newItem").value,
 //       descOf: document.getElementById("newItem2").value,
 //     };
