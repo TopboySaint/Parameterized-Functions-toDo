@@ -20,6 +20,7 @@ function submitItems() {
     document.getElementById("floatingPasswordTwo").value = "";
     window.location.href = "show.html";
   }
+  // localStorage.clear
 }
 
 // function showItems() {
